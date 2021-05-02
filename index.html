@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Something</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <div class="js-clock">
       <h1>00:00</h1>
     </div>
-    <form class="js_userForm">
-      <input type="text" placeholder="Please your name" />
+    <form class="js_userForm form">
+      <input type="text" placeholder="What is your name?" />
     </form>
-    <h3 class="js_User"></h3>
+    <h4 class="js_User greetings"></h4>
+
+    <form class="js-listform listform">
+      <input type="text" placeholder="What TO do" />
+    </form>
+    <ul class="js-list"></ul>
+
     <script src="clock.js"></script>
     <script src="user.js"></script>
+    <script src="dolist.js"></script>
     <script src="background.js"></script>
+    <script src="weather.js"></script>
   </body>
 </html>

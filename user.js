@@ -22,7 +22,7 @@ function handleSubmit(event){
 }
 
 function paintUserName(text){
-    userInput.classList.remove(SHOW);
+    userForm.classList.remove(SHOW);
     Username.classList.add(SHOW);
     Username.innerText=`Welcome ${text}`;
 
