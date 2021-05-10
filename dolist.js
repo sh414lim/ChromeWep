@@ -29,7 +29,7 @@ const li=document.createElement("li");
 const but=document.createElement("button");
 const span=document.createElement("span");
 const newId=todos.length +1;
-but.innerText="Del"
+but.innerText="X"
 but.addEventListener("click", handleDelete)
 li.appendChild(but)
 li.appendChild(span);
