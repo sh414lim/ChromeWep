@@ -1,7 +1,18 @@
+const API_KEY="c98df855229618a9bfa933d0f92f953f"
 const COORDS='coords';
 
+function saveCoords(coordsObj){
+    localStorage.setItem(COORDS,JSON.stringify(coordsObj))
+}
+
 function handleHeoSucces(postition){
-    console.log(position);
+    const latitude=postition.coords.latitude;
+    const longitude=postition.coords.longitude;
+    const coordsObj={
+        latitude,
+        longitude,
+    }
+    saveCoords(coordsObj);
 }
 
 function hadleGeoError(){
@@ -10,13 +21,13 @@ function hadleGeoError(){
 
 
 function askForCoords(){
-    navigator.geolocation.getCurrentPosition(handleHeoSucces,handleGeoError);
+    navigator.geolocation.getCurrentPosition(handleHeoSucces,hadleGeoError); //위치 정보를 읽는 방법
 }
 
 function loadCoords(){
     const loadedCords=localStorage.getItem(COORDS);
-    if(loadCoords === null){
-        askforCoords();
+    if(loadedCords === null){
+        askForCoords();
     }else{
         //getWeather
     }
