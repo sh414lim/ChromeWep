@@ -1,29 +1,29 @@
+const COORDS='coords';
 
-
-const COORDS="coords"
-
-function handleGeoSucces(position){
-    consoke.log(position);
+function handleHeoSucces(postition){
+    console.log(position);
 }
 
-function handleGeoError(){
-    console.log("can't access geo location")
+function hadleGeoError(){
+    console.log("Can't access geo location")
 }
+
 
 function askForCoords(){
-    navigator.geolocation.getCurrentPosition(handleGeoSucces,handleGeoError);
+    navigator.geolocation.getCurrentPosition(handleHeoSucces,handleGeoError);
 }
 
 function loadCoords(){
     const loadedCords=localStorage.getItem(COORDS);
-    if(loadedCords === null){
+    if(loadCoords === null){
         askforCoords();
     }else{
-        //getWearger
+        //getWeather
     }
 }
 
 function init(){
     loadCoords();
 }
+
 init();
