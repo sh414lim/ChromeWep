@@ -113,3 +113,18 @@ body {
         border-radius: 50px;
         background-color:inherit;
       }
+
+      .js-weather{
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+          
+      }
+      .js-weather:hover{
+        color: black;
+        font-size: 30px;
+        font-weight: 800;
+        transition: font-size 0.5s ease-in-out;
+      }
