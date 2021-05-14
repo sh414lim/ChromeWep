@@ -54,7 +54,11 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 80px;
+          font-size: 50px;
+      }
+      .js-clock:hover{
+        font-size: 60px;
+        transition: font-size 0.5s ease-in-out;
       }
       .js_userForm input{
            display: flex;
